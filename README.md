@@ -1,2 +1,2 @@
 # learn_javascript_base
-start javascript path from basic again 
+## Simplify your JavaScript learning experience with this beginner-friendly repository. Get started on your coding adventure today!
