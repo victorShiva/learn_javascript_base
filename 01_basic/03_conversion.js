@@ -48,3 +48,37 @@ console.log(typeof stringNumber);
 
 
 // ***************************  Operations  ***************************
+let value = 75;
+let negValue=-value;
+// console.log(negValue);
+
+
+// console.log(2*5);
+// console.log(7%4);
+// console.log(7/4);
+
+
+let str1='shiva'
+let str2=" gupta"
+// console.log(str1 + str2);
+
+
+// console.log("1"+2);     //12
+// console.log(1+"2");     //12
+// console.log("1"+2+4);   // 124
+// console.log(2+4+"1");  // 61
+
+// console.log(true);
+// console.log(+true);
+
+
+let demoCounter=100;
+// let num1 = demoCounter++; //100
+let num1 = ++demoCounter; //101
+// console.log(num1);
+
+
+
+
+
+
