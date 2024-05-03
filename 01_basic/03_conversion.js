@@ -1,3 +1,4 @@
+/*
 // let score='57';
 // let score='57shi';
 // let score=null;
@@ -42,3 +43,8 @@ let someNUmber=75;
 let stringNumber=String(someNUmber);
 console.log(stringNumber);
 console.log(typeof stringNumber);
+*/
+
+
+
+// ***************************  Operations  ***************************
