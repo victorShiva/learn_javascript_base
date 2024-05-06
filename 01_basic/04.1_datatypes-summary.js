@@ -11,8 +11,8 @@ const largeNumber= 765434567765434567n
 const id = Symbol('123');
 const anotherId = Symbol('123');
 
-console.log(id == anotherId);
-console.log(id === anotherId);
+// console.log(id == anotherId);
+// console.log(id === anotherId);
 
 // ## Javascript is Dynamic Typed language
 
@@ -30,6 +30,13 @@ function myFun(){
     console.log("Hello world");
 }
 
-    console.log(typeof heros);
-    console.log(typeof myObj);
-    console.log(typeof myFun);
+    // console.log(typeof heros);
+    // console.log(typeof myObj);
+    // console.log(typeof myFun);
+
+
+
+// ++++++++++++++++++++++++++++Memory++++++++++++++++++++++++++
+// Stack (Primitive) , Heap (Non-Primitive)
+
+let myYoutube="victorShiva";
