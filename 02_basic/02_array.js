@@ -99,3 +99,18 @@ console.log(...num_str);                   // 12 34 56 78 9 shiva gupta ritika
 
 console.log(num_str.join());                // '12,34,56,78,9,shiva,gupta,ritika'
 console.log(num_str.join(''));              // '123456789shivaguptaritika'
+
+
+
+// ****************** spread (object literals) ******************
+let data = {
+    name: 'shiva',
+    last: 'gupta',
+    age: 25,
+    isLogIn: true
+};
+
+let userInfo = { ...data, id: 204, fav: 'JavaScript' };
+
+console.log(data);                         // { name: 'shiva', last: 'gupta', age: 25, isLogIn: true }
+console.log(userInfo);                      // {name: 'shiva',last: 'gupta',age: 25 , isLogIn: true , id: 204 , fav: 'JavaScript'}
