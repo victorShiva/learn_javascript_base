@@ -42,7 +42,15 @@ console.log(Array.of(score1,score2,score3,score4))
 
 
 
-//***************************  ...Spread  operators ********* */
+//***************************  ... Spread  operators ********* */
+
+//----------------------------------------------------
+let num1 = [10, 20, 30, 40, 50];
+console.log(...num1);                       // 10 20 30 40 50
+console.log(10, 20, 30, 40, 50);            // 10 20 30 40 50
+console.log(..."SHIVAGUPTA");               // S H I V A G U P T A
+
+
 
 let arr1 = [12, 34, 56, 78, 9, 3, 1, 2, 3, 57, 88, 9, 96];
 
