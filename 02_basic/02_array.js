@@ -65,3 +65,29 @@ let myobj = {
     isLogIn: true
 };
 // console.log(...myobj);   // Error 
+
+
+
+// ******************* join() *****************
+
+
+arr1 = [12, 34, 56, 78, 9, "shiva", "gupta", "ritika"];
+let createString = arr1.join();
+console.log(createString);                         // 12,34,56,78,9,shiva,gupta,ritika
+console.log(typeof createString);                   //string
+
+//console.log(createString.join('-'));              // createString is a string
+
+console.log(arr1.join(''));             // 123456789shivaguptaritika
+console.log(arr1.join('+'));            // 12+34+56+78+9+shiva+gupta+ritika
+
+
+
+
+//************************* spread() method vs join() ****************** */
+let num_str = [12, 34, 56, 78, 9, "shiva", "gupta", "ritika"];
+
+console.log(...num_str);                   // 12 34 56 78 9 shiva gupta ritika
+
+console.log(num_str.join());                // '12,34,56,78,9,shiva,gupta,ritika'
+console.log(num_str.join(''));              // '123456789shivaguptaritika'
