@@ -39,3 +39,29 @@ let score3 = 300;
 let score4 = 400;
 
 console.log(Array.of(score1,score2,score3,score4))
+
+
+
+//***************************  ...Spread  operators ********* */
+
+let arr1 = [12, 34, 56, 78, 9, 3, 1, 2, 3, 57, 88, 9, 96];
+
+console.log(...arr1);                            //  12 34 56 78 9 3 1 2 3 57 88 9 96
+console.log([...arr1]);                           // [ 12, 34, 56, 78,  9, 3, 1,  2,  3, 57, 88, 9, 96 ]
+console.log({ ...arr1 });                         // {'0': 12,'1': 34,'2': 56,'3': 78,'4': 9,'5': 3,'6': 1,'7': 2,'8': 3,'9': 57,'10': 88,'11': 9,'12': 96}
+
+
+let userName = 'Shiva_Gupta';
+console.log(...userName);                        // S h i v a _ G u p t a
+console.log([...userName]);                       // [ 'S', 'h', 'i', 'v','a', '_', 'G', 'u', 'p', 't', 'a' ]
+console.log({ ...userName });                     // {'0': 'S','1': 'h','2': 'i','3': 'v','4': 'a','5': '_','6': 'G','7': 'u','8': 'p','9': 't','10': 'a'}
+
+
+
+let myobj = {
+    name: 'shiva',
+    last: 'gupta',
+    age: 25,
+    isLogIn: true
+};
+// console.log(...myobj);   // Error 
