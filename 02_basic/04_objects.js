@@ -29,11 +29,18 @@ const obj2 = {3:"c",4:"d"};
 //console.log(obj3);
 
 
-// const obj3 = Object.assign({},obj1,obj2);
+// const obj3 = Object.assign(obj1,obj2);
 // console.log(obj3);                              // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+// console.log(obj1);                              // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
-const obj3 = {...obj1,...obj2}
-console.log(obj3);                          //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+
+const obj3 = Object.assign({},obj1,obj2);
+console.log(obj3);                              // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+console.log(obj1);                              // { '1': 'a', '2': 'b' }
+
+
+// const obj3 = {...obj1,...obj2}
+// console.log(obj3);                          //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
 
 const users = [
@@ -84,3 +91,30 @@ console.log(arrayOfTries);                              //  [[ 'id', 'jack123' ]
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));                   //true
 console.log(tinderUser.hasOwnProperty('isLoggedOut'));                  //false
 
+
+
+
+
+///**************************Object destructuring ***************** */
+
+const course ={
+    courseName :"Javascript ",
+    price:"999",
+    courseInstructor:"Raghav"
+}
+course.courseInstructor;         //Raghav
+
+const {courseInstructor} = course;
+console.log(courseInstructor);
+
+const {courseInstructor:courseTeacher} =course;
+console.log(courseTeacher);
+
+
+//****************** JSON */
+// {
+//     "name":"shiva",
+//     "courseName":"MEARN-STACK",
+//     "price":"free",
+//     "age":25
+// }
