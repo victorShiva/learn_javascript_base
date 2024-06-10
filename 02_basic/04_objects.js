@@ -118,3 +118,31 @@ console.log(courseTeacher);
 //     "price":"free",
 //     "age":25
 // }
+
+
+// ************************* destructuring object ****************
+
+const person = {
+    name: "John Doe",
+    age: 30,
+    occupation: "Software Engineer",
+    isMarried: true,
+    hobbies: ["coding", "reading", "hiking"],
+    address: {
+      street: "123 Main St",
+      city: "Anytown",
+      state: "CA",
+      zip: "91234",
+    },
+  };
+  // console.log(person);
+  
+  const {
+    name: userName,
+    occupation: job = "Data Analysis",
+    hobbies: passion = "Software Engineer",
+  } = person;
+  
+  console.log(userName);
+  console.log(job);
+  console.log(passion);

@@ -11,14 +11,14 @@ let allHeros =marvel_heros.concat(native_h);
 // console.log(allHeros);  // [ 'thor', 'ironman', 'spiderman', 'shaktiman', 'krish', 'aryaman' ]
 
 let all_new_heros = [...marvel_heros,...native_h];
-console.log(all_new_heros);
+// console.log(all_new_heros);
 
 
 
 let newArr = [2,3,4,[9,8,7],12,34,[43,45,56,1,[100,200]]];
 let real_newArr = newArr.flat(Infinity);
 
-console.log(real_newArr);
+// console.log(real_newArr);
 
 
 //****************** convert to Array */
