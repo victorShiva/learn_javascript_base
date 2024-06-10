@@ -12,11 +12,11 @@
 
 
 var c = 57;
-let a=45;
+let a = 45;
 {
-    let a =10;
-    const b=20;
-    var c =30;
+    let a = 10;
+    const b = 20;
+    var c = 30;
     console.log("inner", a);
 }
 
@@ -27,10 +27,10 @@ console.log(c);
 
 //++++++++++++++function scope+++++++++++
 
-function one(){
+function one() {
     const userName = "Raghav";
 
-    function two(){
+    function two() {
         const website = "Instagram";
         console.log(userName);
     }
@@ -42,9 +42,9 @@ one();
 
 // +++++++++++++++ block scope +++++++++++++++++
 
-if(true){
-    const userName="Raghav";
-    if(userName === "Raghav"){
+if (true) {
+    const userName = "Raghav";
+    if (userName === "Raghav") {
         const website = "Instagram";
         console.log(userName + website);
     }
@@ -58,15 +58,15 @@ if(true){
 
 console.log(addOne(8));             // 9
 
-function addOne(num1){              // regular function
-    return num1+1;
+function addOne(num1) {              // regular function
+    return num1 + 1;
 }
 
 
 // console.log(addTwo(10));             // can not access before initialization
 
-const addTwo = function(num1){
-    return num1+2;
+const addTwo = function (num1) {
+    return num1 + 2;
 }
 
 console.log(addTwo(20));
