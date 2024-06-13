@@ -12,7 +12,7 @@ div.id = Math.round(Math.random() * 10 + 1);
 div.setAttribute('title', 'generated-title');
 
 
-// div.innerText = "Hello Good Evening!";
+// div.innerHTML = "Hello Good Evening!";
 // or
 let addText = document.createTextNode("Hello Good Moning!");
 div.appendChild(addText);
