@@ -1,0 +1,52 @@
+html{
+    margin: 0;
+}
+
+body{
+    background-color: #fff;
+    color: black;
+}
+span{
+    display: block;
+}
+.canvas{
+    margin: 100px auto;
+    width: 80%;
+    text-align: center;
+}
+.button{
+    width: 100px;
+    height: 100px;
+    border: solid 2px black;
+    display: inline-block;
+}
+#grey{
+    background-color: grey;
+    cursor: pointer;
+}
+#white{
+    background-color: #fff;
+    cursor: pointer;
+}
+#blue{
+    background-color: blue;    
+    cursor: pointer;
+
+}
+#yellow{
+    background-color: yellow;    
+    cursor: pointer;
+
+}
+#grey:active{
+    background-color: #524e4e;
+}
+#white:active{
+    background-color: #cac2c2;
+}
+#blue:active{
+    background-color: #1f1fac;
+}
+#yellow:active{
+    background-color: #e3d50e;
+}
