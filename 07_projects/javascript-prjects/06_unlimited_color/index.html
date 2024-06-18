@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+    body {
+        background-color: rgb(42, 40, 40);
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <nav>
+        <a href="../index.html" aria-current="page">Home</a>
+        <a target="_blank" href="https://github.com/victorShiva/learn_javascript_base">GitHub Channel</a>
+    </nav>
+    <h1>Unlimited Colors</h1>
+    <h2>Start should change the background color every second</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const start = document.querySelector('#start');
+    const stop = document.querySelector('#stop');
+    let intervalId;
+
+    start.addEventListener('click', startChangingColor);
+    stop.addEventListener('click', stopChangingColor);
+
+
+
+    // generate a random color
+    const randomColor = function () {
+        const hex = "0123456789ABCDEF";
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+
+    // function startChangingColor() {
+    //     stopChanges = setInterval(() => {
+    //         document.body.style.backgroundColor = randomColor();
+    //     }, 1000)
+    // }
+
+
+    function startChangingColor() {
+        if (!intervalId) {
+            intervalId = setInterval(changeBgColor, 1000);
+        }
+
+        function changeBgColor() {
+            document.body.style.backgroundColor = randomColor();
+        }
+    }
+
+    function stopChangingColor() {
+        clearInterval(intervalId);
+        intervalId = null;
+    }
+</script>
+
+</html>
