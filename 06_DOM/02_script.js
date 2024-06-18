@@ -52,7 +52,7 @@ console.log(nex);
 
 document.write('<p>next Sibling of div-03 </p><ol>');
 while (nex) {
-    document.write('<li>' + nex.nodeName + '</li>');
+    document.write('<li>' + nex.nodeName + '</li>');  // tagName
     nex = nex.nextElementSibling;
 }
 document.write('</ol>');
@@ -61,7 +61,7 @@ document.write('</ol>');
 
 // ***************** get the parent element of any element
 let children = document.querySelector('.day');
-let findParent = children.parentElement;
+let findParent = children.parentElement;    //parentNode
 console.log(findParent);
 
 

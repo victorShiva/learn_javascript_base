@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Shivba aur Code</h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    function greeting() {
+        console.log("Good Morning!");
+    }
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "javascipt to practice";
+    }
+    const stopChanges = setTimeout(changeText, 2000);
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(stopChanges);
+    });
+
+
+
+
+</script>
+
+</html>
