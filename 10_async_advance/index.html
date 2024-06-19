@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .container {
+            width: 40%;
+            min-height: 70%;
+            border: solid 2px #726d6d;
+            text-align: center;
+            position: relative;
+        }
+
+        button {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .avatar {
+            width: 100%;
+            min-height: 60%;
+            max-height: 500px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #252323; color: aliceblue;">
+    <pre>
+        0 UNSENT Client has been created. open() not called yet.
+        1 OPENED open() has been called.
+        2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+        3 LOADING Downloading; responseText holds partial data.
+        4 DONE The operation is complete.
+    </pre>
+
+</body>
+<script>
+    const container = document.createElement('div');
+    const btn = document.createElement('button');
+    const image = document.createElement('img');
+    const p = document.createElement('p');
+    image.classList.add('avatar');
+
+    container.setAttribute('class', 'container');
+    btn.setAttribute('type', 'button');
+    const addText = document.createTextNode('Find-Card');
+    btn.appendChild(addText);
+
+    container.append(btn);
+    document.body.append(container);
+    btn.addEventListener('click', getInfo);
+
+    function getInfo() {
+        container.insertAdjacentElement("afterbegin", image);
+        image.insertAdjacentElement("afterend", p);
+        const requestURL = "https://api.github.com/users/victorShiva";
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestURL);
+        xhr.send();
+        console.log(xhr);
+        xhr.onreadystatechange = function () {
+            console.log(this.readyState);
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(xhr.response);
+                p.innerHTML = `Followers : ${data.followers}`;
+                image.src = data.avatar_url;
+            }
+        }
+    }
+
+</script>
+
+</html>
