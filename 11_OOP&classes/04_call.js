@@ -58,15 +58,23 @@ console.log(personOne instanceof SetUsername);
 
 
 
+function myPlessue() {
+    console.log(`Not Access from constructor function prototypes`);
+}
+
+myPlessue();
+console.dir(myPlessue);
 
 
-// const info = {
-//     name: "Alok",
-//     age: 24,
-//     email: "alok@delta.com",
-//     logIn: true,
-//     getInfo: () => {
-//         console.log(`hey this is ${this.name}`);
-//     }
-// }
-// info.getInfo();
+const info = {
+    name: "Alok",
+    age: 24,
+    email: "alok@delta.com",
+    logIn: true,
+    getInfo: () => {
+        console.log(this);
+        console.log(`hey this is ${this.name}`);
+    }
+}
+info.getInfo();
+console.dir(info);
