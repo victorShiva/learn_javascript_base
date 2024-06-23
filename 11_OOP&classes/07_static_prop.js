@@ -22,6 +22,7 @@ class Master extends User {
 
         this.greet = function () {
             console.log(`hello ${this.userName}`);
+            console.log(this);
         }
     }
 
@@ -31,14 +32,17 @@ class Master extends User {
 }
 
 const masterOne = new Master("shiva", "shiva@google.com", 5775);
-console.log(masterOne);
-console.log(masterOne.getEmail());
-masterOne.logMe();
-/////// console.log(masterOne.createId());              // Error
+// console.log(masterOne);
+// console.log(masterOne.getEmail());
+// masterOne.logMe();
+// /////// console.log(masterOne.createId());              // Error
 
 
-console.log(masterOne instanceof Master);       //true
-console.log(masterOne instanceof User);         //true
-console.log(userOne instanceof User);           //true
-console.log(userOne instanceof Master);         //false
-console.log(userOne instanceof User);           //true
+// console.log(masterOne instanceof Master);       //true
+// console.log(masterOne instanceof User);         //true
+// console.log(userOne instanceof User);           //true
+// console.log(userOne instanceof Master);         //false
+// console.log(userOne instanceof User);           //true
+
+
+masterOne.greet();

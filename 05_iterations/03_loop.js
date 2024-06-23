@@ -28,9 +28,15 @@ map.set("IN", "India");
 // Object
 const myObj = {
     'game1': 'NF5',
-    game2 : 'spiderMan',
-    game3 : 'PUBG'
+    game2: 'spiderMan',
+    game3: 'PUBG'
 }
-// for (const [key,value] of myObj) {
+// for (const [key, value] of myObj) {
 //     console.log(key);                        // Error Object is not iteratable
 // }
+
+
+for (let [key, value] of Object.entries(myObj)) {
+    console.log(key);
+    console.log(value);
+}
