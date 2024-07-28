@@ -36,14 +36,14 @@
 // ********************** clouser
 
 
-// function makeFunc() {
-//     const name = "Mozilla";
-//     function displayName() {
-//         console.log(name);
-//     }
-//     return displayName;
-// }
+function makeFunc() {
+    const name = "Mozilla";
+    function displayName() {
+        console.log(name);
+    }
+    return displayName;
+}
 
-// const myFunc = makeFunc();
-// myFunc();
+const myFunc = makeFunc();
+myFunc();
 
